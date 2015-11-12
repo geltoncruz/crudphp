@@ -17,12 +17,12 @@ $codigo = $_GET['codigo'];
        $linha = mysql_fetch_array($result,MYSQL_ASSOC);
       ?>
       <label for="nome">Nome:</label>
-      <input type="text" name="nome" placeholder="Nome:">
+      <input type="text" name="nome" placeholder="Nome:" value="<?=$linha['nome']; ?>">
 
       <label for="preco">Preço:</label>
-      <input type="text" name="preco" placeholder="Preço">
+      <input type="text" name="preco" placeholder="Preço" value="<?=$linha['preco']; ?>">
 
-      <textarea name="descricao"></textarea>
+      <textarea name="descricao"><?=$linha['descricao']; ?></textarea>
 
       <button>Atualizar</button>
     </form>
