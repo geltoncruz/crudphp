@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
 include_once("conexao.php");
+$codigo = $_GET['codigo'];
+?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,6 +11,11 @@ include_once("conexao.php");
   <body>
     <h1>Cadastrar produtos</h1>
     <form action="" method="post">
+      <?php
+       $query = "SELECT * FROM produto where codigo = $codigo" ;
+       $result = mysql_query($query);
+       $linha = mysql_fetch_array($result,MYSQL_ASSOC);
+      ?>
       <label for="nome">Nome:</label>
       <input type="text" name="nome" placeholder="Nome:">
 
