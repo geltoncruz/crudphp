@@ -1,21 +1,23 @@
 <!DOCTYPE html>
+<?php
+include_once("conexao.php");
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Alterar produto</title>
+    <title>Cadastro de produtos</title>
   </head>
   <body>
-    <h1>Alterar produtos</h1>
+    <h1>Cadastrar produtos</h1>
     <form action="" method="post">
       <label for="nome">Nome:</label>
-      <input type="text" name="nome" placeholder="Nome:" value="<?php echo $linha['nome']; ?>">
+      <input type="text" name="nome" placeholder="Nome:">
 
       <label for="preco">Preço:</label>
-      <input type="text" name="preco" placeholder="Preço" value="<?php echo $linha['preco']; ?>">
+      <input type="text" name="preco" placeholder="Preço">
 
-      <textarea name="descricao"><?php echo $linha['descricao']; ?></textarea>
+      <textarea name="descricao"></textarea>
 
-      <button>Cadastrar</button>
+      <button>Atualizar</button>
     </form>
   </body>
 </html>
