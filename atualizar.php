@@ -2,6 +2,16 @@
 <?php
 include_once("conexao.php");
 $codigo = $_GET['codigo'];
+if($_GET['codigo'] = 'update' ){
+  echo $codigo;
+  $nome = $_POST['nome'];
+  $preco = $_POST['preco'];
+  $descricao = $_POST['descricao'];
+
+  $q = "UPDATE produto set nome='$nome',preco=$preco,descricao='$descricao' where codigo = $codigo";
+  $update=mysql_query($q);
+
+}
 ?>
 <html>
   <head>
