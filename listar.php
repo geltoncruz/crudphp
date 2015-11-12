@@ -12,6 +12,7 @@
         <th>Nome</th>
         <th>Preco</th>
         <th>Observacao</th>
+        <th>atividade</th>
       </thead>
       <tbody>
     <?php
