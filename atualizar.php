@@ -10,7 +10,7 @@ $codigo = $_GET['codigo'];
   </head>
   <body>
     <h1>Cadastrar produtos</h1>
-    <form action="" method="post">
+    <form action="<?php $_SERVER['PHP_SELF'] ?>?status=update&codigo=<?=$codigo?>" method="post">
       <?php
        $query = "SELECT * FROM produto where codigo = $codigo" ;
        $result = mysql_query($query);
