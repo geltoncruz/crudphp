@@ -6,13 +6,7 @@
   </head>
   <body>
     <h1>Alterar produtos</h1>
-    <form action="<?php $_SERVER['PHP_SELF'] ?>?status=update&codigo=<?=$codigo?>" method="post">
-      <?php
-
-         $query = "select * from produto where codigo = $codigo";
-         $result = mysql_query($query);
-          $linha = mysql_fetch_array($result,MYSQL_ASSOC);
-       ?>
+    <form action="" method="post">
       <label for="nome">Nome:</label>
       <input type="text" name="nome" placeholder="Nome:" value="<?php echo $linha['nome']; ?>">
 
