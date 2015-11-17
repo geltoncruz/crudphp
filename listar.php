@@ -26,7 +26,11 @@
           <td><?=$linha['nome']; ?></td>
           <td><?=$linha['preco']; ?></td>
           <td><?=$linha['descricao'] ?></td>
-          <td><a href="atualizar.php?codigo=<?=$linha['codigo']; ?>">Atualizar</a></td>
+          <td>
+            <a href="atualizar.php?codigo=<?=$linha['codigo']; ?>">Atualizar</a><br>
+            
+
+          </td>
         </tr>
         <?php
         }
