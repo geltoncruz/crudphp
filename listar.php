@@ -1,3 +1,12 @@
+<?php
+  include_once("conexao.php");
+
+  if($_GET['status'] == "delete"){
+      $codigo = mysql_real_escape_string($_GET['codigo']);
+      $q = "delete from produto where codigo = $codigo";
+      $query = mysql_query($q);
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,6 +15,10 @@
   </head>
   <body>
     <header><h1>Lista de produtos</h1></header>
+    <NAV>
+      <a href="cadastro.php">Cadastrar</a>
+
+    </NAV>
     <table border="1">
       <thead>
         <th>Codigo</th>
@@ -16,7 +29,6 @@
       </thead>
       <tbody>
     <?php
-     include_once("conexao.php");
      $query = "SELECT * FROM produto";
      $result = mysql_query($query);
      while($linha = mysql_fetch_array($result,MYSQL_ASSOC)){
