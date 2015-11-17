@@ -12,6 +12,6 @@
   if($query){
     echo "Produto cadastrado com sucesso!";
   }
-  $close = mysqli_close($conn);
+  $close = mysql_close($conn);
 
 ?>

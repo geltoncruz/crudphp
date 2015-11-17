@@ -28,7 +28,7 @@
           <td><?=$linha['descricao'] ?></td>
           <td>
             <a href="atualizar.php?codigo=<?=$linha['codigo']; ?>">Atualizar</a><br>
-            
+            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?status=delete&codigo=<?php echo $linha['codigo'];?>">Remover</a>
 
           </td>
         </tr>
